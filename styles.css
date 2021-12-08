@@ -118,33 +118,3 @@ footer{
 }
 
 
-@media all and (max-width:600px){
-  .square{
-    width: 180px;
-    height: 180px;
-  }
-  .wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 440px;
-    height: 480px;
-    margin-left: -35px;
-    overflow: hidden;
-
-  }
-  html{
-overflow: hidden;
-padding: 0;
-margin: 0;
-  }
-  body{
-    margin: 0;
-  }
-  footer{
-    margin-left: 100%;
-    padding-right: 150%;
-
-  }
-}
