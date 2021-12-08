@@ -1,0 +1,150 @@
+body{
+  background: #edf2f4;
+display: grid;
+place-items:center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+}
+.textWrapper{
+    padding-top: 50px;
+}
+h1{
+  font-size: 4rem;
+  font-family: "syne";
+  margin: 0;
+  padding: 0;
+}
+button{
+  margin: 0;
+  position: relative;
+  padding: 0;
+  padding: 14px 272px;
+  font-family: "syne";
+  border-radius: 250px;
+  border: 1px solid #edf2f4;
+  color: #fff;
+  background-color:   transparent;
+
+  overflow: hidden;
+  margin-left: calc((100%/2) - 291px);
+}
+button::before{
+  content: "START GAME";
+  font-family: 'syne';
+  font-weight: 900;
+  letter-spacing: 7;
+  text-shadow: 0 0 70px #000;
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  padding-top: 7px;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(70px);
+}
+
+button::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1000px;
+  background: conic-gradient(#f94144,#ffb703,#a7c957,#3a86ff,#f94144,#f9c74f,#a7c957,#48cae4);
+filter: opacity(.8);
+filter: brightness(1);
+  left: 0;
+  top: -240px;
+  z-index: -1;
+  animation: spin 21s linear infinite;
+  border-radius: 250px;
+}
+
+button:hover::before{
+  background:   linear-gradient(160deg, #f94144, #ffb703);
+  transition: all .2s ease-out;
+  content: "START GAME";
+  font-size: 24px;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  padding-top: 8px;
+  top: 0;
+  left: 0;
+}
+@keyframes spin {
+  100% {transform: rotate(360deg);}
+}
+.square{
+  width: 200px;
+  height: 200px;
+  border-radius: 40px;
+}
+
+
+.Red{
+  background: #f94144;
+}
+.Blue{
+  background: #3a86ff;
+}
+.Green{
+  background: #a7c957;
+}
+.Yellow{
+  background: #ffb703;
+}
+.clicked{
+  filter: opacity(.8);
+}
+
+.wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+}
+
+footer{
+  font-family: 'syne';
+  font-weight: 900;
+  font-size: 20px;
+  filter: opacity(.07);
+}
+
+
+@media all and (max-width:600px){
+  .square{
+    width: 180px;
+    height: 180px;
+  }
+  .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 440px;
+    height: 480px;
+    margin-left: -35px;
+    overflow: hidden;
+
+  }
+  html{
+overflow: hidden;
+padding: 0;
+margin: 0;
+  }
+  body{
+    margin: 0;
+  }
+  footer{
+    margin-left: 100%;
+    padding-right: 150%;
+
+  }
+}
